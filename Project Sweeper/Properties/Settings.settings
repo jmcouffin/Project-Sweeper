@@ -3,10 +3,13 @@
   <Profiles />
   <Settings>
     <Setting Name="AddinPath" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">$(AppData)\Autodesk\Revit\Addins\2022\</Value>
     </Setting>
     <Setting Name="EntCheck" Type="System.DateTime" Scope="User">
       <Value Profile="(Default)">2015-05-01</Value>
+    </Setting>
+    <Setting Name="RVTVersion" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2022</Value>
     </Setting>
   </Settings>
 </SettingsFile>

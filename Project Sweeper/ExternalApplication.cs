@@ -24,9 +24,9 @@ namespace PKHL.ProjectSweeper
             RibbonPanel pkhlPanel = application.CreateRibbonPanel(Constants.GROUP_NAME);
 
             PushButton lscButton = pkhlPanel.AddItem(
-                new PushButtonData("lscButton", 
-                LocalizationProvider.GetLocalizedValue<string>("LSC_Title_Ribbon"), 
-                dllPath, 
+                new PushButtonData("lscButton",
+                LocalizationProvider.GetLocalizedValue<string>("LSC_Title_Ribbon"),
+                dllPath,
                 "PKHL.ProjectSweeper.LineStyleCleaner.main_command")) as PushButton;
             lscButton.Image = NewBitmapImage("lsc16x16.png");
             lscButton.LargeImage = NewBitmapImage("lsc.png");
@@ -36,8 +36,8 @@ namespace PKHL.ProjectSweeper
             lscButton.SetContextualHelp(_contextualHelp);
 
             PushButton lpcButton = pkhlPanel.AddItem(
-                new PushButtonData("lpcButton", 
-                LocalizationProvider.GetLocalizedValue<string>("LPC_Title_Ribbon"), 
+                new PushButtonData("lpcButton",
+                LocalizationProvider.GetLocalizedValue<string>("LPC_Title_Ribbon"),
                 dllPath,
                 "PKHL.ProjectSweeper.LinePatternCleaner.MainCommand")) as PushButton;
             lpcButton.Image = NewBitmapImage("lpc16x16.png");
@@ -48,9 +48,9 @@ namespace PKHL.ProjectSweeper
             lpcButton.SetContextualHelp(_contextualHelp);
 
             PushButton tscButton = pkhlPanel.AddItem(
-                new PushButtonData("tscButton", 
-                LocalizationProvider.GetLocalizedValue<string>("TSC_Title_Ribbon"), 
-                dllPath, 
+                new PushButtonData("tscButton",
+                LocalizationProvider.GetLocalizedValue<string>("TSC_Title_Ribbon"),
+                dllPath,
                 "PKHL.ProjectSweeper.TextStyleCleaner.main_command")) as PushButton;
             tscButton.Image = NewBitmapImage("tsc16x16.png");
             tscButton.LargeImage = NewBitmapImage("tsc.png");
@@ -60,9 +60,9 @@ namespace PKHL.ProjectSweeper
             tscButton.SetContextualHelp(_contextualHelp);
 
             PushButton frtcButton = pkhlPanel.AddItem(
-                new PushButtonData("frtcButton", 
-                LocalizationProvider.GetLocalizedValue<string>("FRTC_Title_Ribbon"), 
-                dllPath, 
+                new PushButtonData("frtcButton",
+                LocalizationProvider.GetLocalizedValue<string>("FRTC_Title_Ribbon"),
+                dllPath,
                 "PKHL.ProjectSweeper.FillRegionTypeCleaner.main_command")) as PushButton;
             frtcButton.Image = NewBitmapImage("frt16x16.png");
             frtcButton.LargeImage = NewBitmapImage("frt.png");
@@ -72,8 +72,8 @@ namespace PKHL.ProjectSweeper
             frtcButton.SetContextualHelp(_contextualHelp);
 
             PushButton fpcButton = pkhlPanel.AddItem(
-                new PushButtonData("fpcButton", 
-                LocalizationProvider.GetLocalizedValue<string>("FPC_Title_Ribbon"), 
+                new PushButtonData("fpcButton",
+                LocalizationProvider.GetLocalizedValue<string>("FPC_Title_Ribbon"),
                 dllPath,
                 "PKHL.ProjectSweeper.FillPatternCleaner.MainCommand")) as PushButton;
             fpcButton.Image = NewBitmapImage("fpc16x16.png");
@@ -88,7 +88,7 @@ namespace PKHL.ProjectSweeper
 
             PushButton aboutButton = pkhlPanel.AddItem(
                 new PushButtonData("aboutButton",
-                LocalizationProvider.GetLocalizedValue<string>("ABOUT_Title"), 
+                LocalizationProvider.GetLocalizedValue<string>("ABOUT_Title"),
                 dllPath,
                 "PKHL.ProjectSweeper.AboutBoxCommand")) as PushButton;
             aboutButton.Image = NewBitmapImage("about16x16.png");
@@ -98,12 +98,12 @@ namespace PKHL.ProjectSweeper
 
             PushButton helpButton = pkhlPanel.AddItem(
                 new PushButtonData("helpButton",
-                LocalizationProvider.GetLocalizedValue<string>("HelpButton"), 
+                LocalizationProvider.GetLocalizedValue<string>("HelpButton"),
                 dllPath,
                 "PKHL.ProjectSweeper.ApplicationHelp")) as PushButton;
             helpButton.Image = NewBitmapImage("help16x16.png");
             helpButton.LargeImage = NewBitmapImage("help.png");
-            helpButton.ToolTip = LocalizationProvider.GetLocalizedValue<string>("HELP_IconTip"); 
+            helpButton.ToolTip = LocalizationProvider.GetLocalizedValue<string>("HELP_IconTip");
             helpButton.AvailabilityClassName = "PKHL.ProjectSweeper.AlwaysAvailableCheck";
 
 #if MULTILICENSE
@@ -177,8 +177,8 @@ namespace PKHL.ProjectSweeper
             {
                 pkhCommon.StringHelper.RemoveNewLines("This causes the common library to load so the FRTC, LSC and FPC commands don't throw a file not found error.");
             }
-            catch(Exception)
-            {                
+            catch (Exception)
+            {
             }
 
             return Autodesk.Revit.UI.Result.Succeeded;
